@@ -1,0 +1,65 @@
+/* General Label Styles */
+.label {
+    font-size: 20px;
+    font-family: "Arial", sans-serif;
+    -fx-text-fill: #4b4dc4;
+    -fx-font-weight: bold;
+}
+
+/* SVG Curve Styling */
+.curve {
+    -fx-fill: #3c31dd;
+    -fx-opacity: 0.4;
+}
+/* Button Styles */
+.button {
+    -fx-background-color: #4b4dc4;
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+    -fx-font-family: "Arial", sans-serif;
+    -fx-padding: 10px 20px;
+    -fx-background-radius: 8px;
+    -fx-border-radius: 8px;
+    -fx-border-color: #4b4dc4;
+    -fx-border-width: 2px;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 8, 0, 2, 2);
+    -fx-cursor: hand;
+}
+
+/* Button Hover & Pressed */
+.button:hover {
+    -fx-background-color: #3a3cb2;
+    -fx-border-color: #3a3cb2;
+}
+
+.button:pressed {
+    -fx-background-color: #2a2a8d;
+    -fx-border-color: #2a2a8d;
+}
+
+/* Input Styles */
+.text-field, .text-area {
+    -fx-background-color: #f5f5f5;
+    -fx-border-radius: 5px;
+    -fx-border-color: #ccc;
+    -fx-border-width: 1px;
+    -fx-padding: 10px;
+    -fx-font-size: 16px;
+    -fx-font-family: "Arial", sans-serif;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.1), 4, 0, 1, 1);
+}
+
+/* Focused Input */
+.text-field:focused, .text-area:focused {
+    -fx-border-color: #4b4dc4;
+    -fx-background-color: #ffffff;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 8, 0, 2, 2);
+}
+
+/* Text Area Specific Overrides */
+.text-area {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #e0e0e0;
+    -fx-border-radius: 8px;
+    -fx-padding: 15px;
+}

@@ -1,0 +1,90 @@
+/* General Styles for Fonts */
+.label {
+    font-size: 20px;
+    font-family: "Arial", sans-serif;
+    text-fill: #4b4dc4;
+}
+/* Curve styling */
+.curve {
+    -fx-background-color:  #4169e1;
+-fx-shape: "M 0,0 C 300,100 900,100 1200,0 L 1200,815 L 0,815 Z";
+    -fx-background-radius: 50%;
+    -fx-pref-width: 100%;
+    -fx-pref-height:50%;
+    -fx-opacity:0.5;
+}
+
+/* Adding shadow or contrast effect for the curve */
+.curve::before {
+    -fx-content: "";
+    -fx-background-color: #1a344d;
+    -fx-opacity: 0.3;
+}
+/* Button Styles */
+.button {
+    -fx-background-color: #4b4dc4;
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+    -fx-font-family: "Arial", sans-serif;
+    -fx-padding: 10px 20px;
+    -fx-background-radius: 8px;
+    -fx-border-radius: 8px;
+    -fx-border-color: #4b4dc4;
+    -fx-border-width: 2px;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 8, 0, 2, 2);
+    -fx-cursor: hand;
+}
+
+/* Button Hover Effects */
+.button:hover {
+    -fx-background-color: #3a3cb2;
+    -fx-border-color: #3a3cb2;
+}
+
+/* Button Active Effects */
+.button:pressed {
+    -fx-background-color: #2a2a8d;
+    -fx-border-color: #2a2a8d;
+}
+
+/* Input Text Field Styles */
+.text-field, .text-area {
+    -fx-background-color: #f5f5f5;
+    -fx-border-radius: 5px;
+    -fx-border-color: #ccc;
+    -fx-border-width: 1px;
+    -fx-padding: 10px;
+    -fx-font-size: 16px;
+    -fx-font-family: "Arial", sans-serif;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.1), 4, 0, 1, 1);
+}
+
+/* Text Area Styles */
+.text-area {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #e0e0e0;
+    -fx-border-radius: 8px;
+    -fx-font-size: 16px;
+    -fx-padding: 15px;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.1), 4, 0, 1, 1);
+}
+
+/* Text Field Focused Styles */
+.text-field:focused, .text-area:focused {
+    -fx-border-color: #4b4dc4;
+    -fx-background-color: #ffffff;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 8, 0, 2, 2);
+}
+
+/* Label Styles for Input Fields */
+.label {
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+}
+
+/* Layout Styles */
+.hbox, .vbox {
+    -fx-spacing: 20px;
+    -fx-alignment: center;
+    -fx-padding: 10px;
+}

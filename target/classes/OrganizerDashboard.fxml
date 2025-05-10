@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<?import javafx.scene.control.ComboBox?>
+<AnchorPane prefHeight="790.0" prefWidth="1540.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.emsss.OrganizerController">
+    <children>
+
+        <!-- Background curve -->
+        <StackPane AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="300.0">
+            <Region layoutX="-1.0" layoutY="263.0" styleClass="curve" />
+        </StackPane>
+
+        <!-- Main Content -->
+        <HBox spacing="50.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0">
+            <!-- LEFT: Dashboard -->
+            <VBox prefWidth="600.0" spacing="20.0">
+                <Label fx:id="ofaah" text="My Dashboard" textFill="#4b4dc4">
+                    <font>
+                        <Font name="System Bold Italic" size="36.0" />
+                    </font>
+                </Label>
+                <Button onAction="#viewDashboard" prefWidth="200.0" text="Show Dashboard" />
+                <TextArea fx:id="dashboardTextArea" VBox.vgrow="ALWAYS" />
+            </VBox>
+
+            <!-- RIGHT: Controls and logout -->
+            <VBox prefWidth="600.0" spacing="20.0">
+                <VBox alignment="TOP_RIGHT" layoutY="263.0" prefWidth="770.0" />
+
+                <Label fx:id="ofah" text="Organizer Panel" textFill="#4b4dc4">
+                    <font>
+                        <Font name="System Bold Italic" size="36.0" />
+                    </font>
+                </Label>
+                <Button layoutX="947.0" layoutY="271.0" mnemonicParsing="false" onAction="#addBalance" prefHeight="44.0" prefWidth="162.0" text="Edit Balance" />
+                <TextField fx:id="BalanceField" layoutX="693.0" layoutY="269.0" promptText="Enter Balance" />
+                <!-- Event Input Fields -->
+                <Label text="Edit Events:" />
+                <HBox spacing="10.0">
+                    <TextField fx:id="EventNameField" promptText="Event name" />
+                    <TextField fx:id="EventDescriptionField" promptText="Event description" />
+                    <ComboBox fx:id="categoryComboBox" promptText="Select Category" />
+                </HBox>
+                <HBox spacing="10.0">
+                    <TextField fx:id="EventRoomNumber" promptText="Room number" />
+                    <DatePicker fx:id="EventDate" promptText="Event Date" />
+                    <TextField fx:id="EventPrice" promptText="Event Price" />
+                </HBox>
+
+                <HBox spacing="10.0">
+                    <Button onAction="#addEvent" text="Add Event" />
+                </HBox>
+
+                <HBox spacing="10.0">
+                    <TextField fx:id="EventNewNameField" promptText="Event new name" />
+                    <Button onAction="#updateEvent" text="update Event" />
+                </HBox>
+
+                <HBox spacing="10.0">
+                    <TextField fx:id="EventNameForDelete" promptText="Event Name For Delete" />
+                    <Button onAction="#DeleteEvent" text="Delete Event" />
+                </HBox>
+            </VBox>
+              <Button layoutX="1510.0" layoutY="30.0" onAction="#logout" text="Logout" />
+        </HBox>
+    </children>
+</AnchorPane>

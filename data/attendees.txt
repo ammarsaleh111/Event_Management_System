@@ -1,0 +1,5 @@
+attendee|attendee|2006-05-12|560.0|address|MALE
+attendee2|attendee2|2006-05-12|900.0|address|FEMALE
+attendee3|attendee3|2006-05-12|1000.0|address|FEMALE
+attendee4|attendee4|2006-05-12|1000.0|address|FEMALE
+attendee5|attendee5|2007-05-10|5000.0|giza|MALE

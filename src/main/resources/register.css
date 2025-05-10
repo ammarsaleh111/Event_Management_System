@@ -1,0 +1,119 @@
+
+
+.root {
+    -fx-background-color: #3c31dd;
+}
+
+
+
+/* Curve styling */
+.curve {
+    -fx-background-color: white;
+    -fx-shape: "M 0,0 Q 300,150 600,0 L 600,250 L 0,250 Z";
+    -fx-background-radius: 50%;
+    -fx-pref-width: 100%;
+    -fx-pref-height: 100%;
+}
+
+/* Adding shadow or contrast effect for the curve */
+.curve::before {
+    -fx-content: "";
+    -fx-background-color: #1c1a4d;
+    -fx-opacity: 1;
+}
+
+/* Logo Styling */
+.logo {
+    -fx-font-size: 48px;
+    -fx-font-family: 'Poppins', sans-serif;
+    -fx-text-fill: white;
+}
+
+/* Form container styling */
+.container {
+    -fx-background-color: white;
+    -fx-padding: 30 20 30 20;
+    -fx-border-radius: 18px;
+    -fx-background-radius: 18px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.2), 10, 0, 0, 4);
+}
+
+/* Title Text */
+.title {
+    -fx-font-size: 29px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #000000;
+    -fx-font-family: 'Montserrat', sans-serif;
+}
+
+/* Enter text */
+.enter {
+    -fx-font-family: 'Lato';
+    -fx-font-size: 14px;
+    -fx-text-fill: #333333;
+}
+
+/* TextField styling */
+.text-field {
+    -fx-pref-width: 300px;
+    -fx-pref-height: 45px;
+    -fx-background-radius: 12px;
+    -fx-border-radius: 12px;
+}
+
+/* ComboBox Styling */
+.combo-box {
+    -fx-pref-width: 300px;
+    -fx-pref-height: 45px;
+    -fx-background-radius: 12px;
+    -fx-border-radius: 12px;
+    -fx-font-size: 14px;
+    -fx-padding: 10px;
+    -fx-background-color: white;
+    -fx-border-color: #ddd;
+    -fx-border-width: 2px;
+}
+
+.combo-box:hover {
+    -fx-border-color: rgb(98, 98, 223);
+    -fx-background-color: #f3f4f8;
+}
+
+.combo-box:focused {
+    -fx-border-color: rgb(98, 98, 223);
+    -fx-background-color: #ffffff;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.2), 8, 0, 0, 4);
+}
+
+/* ComboBox Arrow button styling */
+.combo-box .arrow {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
+
+/* Submit Button Styling */
+.submit-button {
+    -fx-pref-width: 300px;
+    -fx-pref-height: 45px;
+    -fx-background-color: rgb(98, 98, 223);
+    -fx-text-fill: white;
+    -fx-font-size: 15px;
+    -fx-background-radius: 8px;
+        -fx-font-family: 'Montserrat', sans-serif;
+
+}
+
+.submit-button:hover {
+    -fx-background-color: rgba(98, 98, 223, 0.7);
+    -fx-cursor: hand;
+}
+
+/* Forget text styling */
+.register {
+    -fx-font-family: 'Lato';
+    -fx-font-size: 14px;
+    -fx-text-fill: rgb(98, 98, 223);
+    -fx-cursor: hand;
+        -fx-font-family: 'Montserrat', sans-serif;
+
+}

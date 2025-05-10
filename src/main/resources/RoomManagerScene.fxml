@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.SVGPath?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="865.0" prefWidth="1403.0" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.emsss.RoomManagerController">
+    <children>
+
+        <!-- Decorative SVG curve -->
+        <SVGPath fx:id="curveRegion" content="M 0,0 Q 600,200 1550,0 L 1550,600 L 0,600 Z" layoutX="-2.0" layoutY="265.0" styleClass="curve" />
+
+        <!-- Page Title -->
+        <Text fill="#490fea" layoutX="549.0" layoutY="59.0" text="Room Manager Panel">
+            <font>
+                <Font name="Arial Black" size="48.0" />
+            </font>
+        </Text>
+
+        <!-- Input Labels and Fields -->
+        <Label layoutX="577.0" layoutY="413.0" styleClass="label" text="Enter Capacity:" textFill="#1c2151">
+         <font>
+            <Font size="20.0" />
+         </font></Label>
+        <TextField fx:id="capacityField" layoutX="799.0" layoutY="406.0" prefWidth="200.0" styleClass="text-field" />
+
+        <Label layoutX="577.0" layoutY="473.0" styleClass="label" text="Enter Location:">
+         <font>
+            <Font size="20.0" />
+         </font></Label>
+        <TextField fx:id="locationField" layoutX="800.0" layoutY="465.0" prefWidth="200.0" styleClass="text-field" />
+
+        <Label layoutX="576.0" layoutY="538.0" styleClass="label" text="Enter Room Number:">
+         <font>
+            <Font size="20.0" />
+         </font></Label>
+        <TextField fx:id="roomNumberField" layoutX="800.0" layoutY="530.0" prefWidth="200.0" styleClass="text-field" />
+
+        <!-- Buttons -->
+        <Button fx:id="addRoomButton" layoutX="702.0" layoutY="621.0" onAction="#addRoom" prefHeight="44.0" prefWidth="378.0" styleClass="button" text="Add Room (Enter Capacity &amp; Location Only)" />
+
+        <Button fx:id="updateRoomButton" layoutX="1127.0" layoutY="622.0" onAction="#updateRoom" prefHeight="44.0" prefWidth="334.0" styleClass="button" text="Update Room (Enter all information)" />
+
+        <Button fx:id="deleteRoomButton" layoutX="921.0" layoutY="701.0" onAction="#deleteRoom" prefHeight="44.0" prefWidth="343.0" styleClass="button" text="Delete Room (Enter Room's number only)" />
+         <TextField fx:id="startWorkingHoursField" layoutX="809.0" layoutY="177.0" promptText="            Start Hour" />
+        <Button layoutX="603.0" layoutY="177.0" onAction="#setStartWorkingHoursAction" text="Set Start Hours" />
+
+        <TextField fx:id="endWorkingHoursField" layoutX="806.0" layoutY="257.0" promptText="             End Hour" />
+        <Button layoutX="604.0" layoutY="257.0" onAction="#setEndWorkingHoursAction" text="Set End Hours" />
+
+        <!-- Dashboard -->
+        <Text fill="#3431fc" layoutX="115.0" layoutY="114.0" text="Room Dashboard">
+            <font>
+                <Font name="Arial Black" size="35.0" />
+            </font>
+        </Text>
+
+        <TextArea fx:id="dashboardTextArea" editable="false" layoutX="11.0" layoutY="140.0" prefHeight="669.0" prefWidth="548.0" styleClass="text-area" wrapText="true" />
+
+        <!-- Back Button -->
+        <Button layoutX="1371.0" layoutY="83.0" onAction="#logout" prefHeight="44.0" prefWidth="116.0" styleClass="button" text="Log out" />
+
+    </children>
+</AnchorPane>

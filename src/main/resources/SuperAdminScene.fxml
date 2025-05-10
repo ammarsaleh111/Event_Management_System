@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.SVGPath?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="769.0" prefWidth="1474.0" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.emsss.SuperAdminController">
+    <children>
+
+              <!-- Curve drawn using SVGPath -->
+        <SVGPath fx:id="curveRegion" content="M 0,0 Q 600,200 1550,0 L 1550,600 L 0,600 Z" layoutX="-2.0" layoutY="258.0" styleClass="curve" />
+
+        <!-- Dashboard Section -->
+        <Label layoutX="27.0" layoutY="11.0" styleClass="label" text="My Dashboard">
+         <font>
+            <Font size="40.0" />
+         </font></Label>
+        <Button layoutX="22.0" layoutY="85.0" onAction="#viewDashboard" prefWidth="200.0" text="Show Dashboard" />
+        <TextArea fx:id="dashboardTextArea" layoutX="20.0" layoutY="141.0" prefHeight="652.0" prefWidth="553.0" />
+
+        <!-- SuperAdmin Panel Section -->
+        <Label layoutX="590.0" layoutY="2.0" styleClass="label" text="SuperAdmin Panel">
+         <font>
+            <Font size="55.0" />
+         </font></Label>
+
+        <!-- Edit Rooms -->
+        <Label layoutX="593.0" layoutY="109.0" styleClass="label" text="Edit Rooms:">
+         <font>
+            <Font size="22.0" />
+         </font></Label>
+        <TextField fx:id="roomCapacityField" layoutX="593.0" layoutY="162.0" prefWidth="150.0" promptText="Room Capacity" />
+        <TextField fx:id="roomLocationField" layoutX="762.0" layoutY="163.0" prefWidth="150.0" promptText="Room Location" />
+        <Button layoutX="972.0" layoutY="125.0" onAction="#addRoomButtonAction" prefHeight="44.0" prefWidth="338.0" text="Add Room (Enter Capacity &amp; Location)" />
+
+        <TextField fx:id="roomIdField" layoutX="656.0" layoutY="226.0" prefHeight="42.0" prefWidth="207.0" promptText="Room number" />
+        <Button layoutX="970.0" layoutY="247.0" onAction="#deleteRoomButtonAction" prefHeight="44.0" prefWidth="343.0" text="Delete Room (Enter Room Number only)" />
+
+        <!-- Edit Categories -->
+        <Label layoutX="590.0" layoutY="288.0" prefHeight="51.0" prefWidth="248.0" styleClass="label" text="Edit Categories:" textFill="#050501">
+         <font>
+            <Font size="22.0" />
+         </font></Label>
+        <TextField fx:id="categoryNameField" layoutX="607.0" layoutY="401.0" prefHeight="42.0" prefWidth="137.0" promptText="Category Name" />
+        <Button layoutX="787.0" layoutY="401.0" onAction="#addCategoryButtonAction" prefHeight="46.0" prefWidth="359.0" text="Add Category (Enter Category Name Only)" />
+        <TextField fx:id="startWorkingHoursField" layoutX="1216.0" layoutY="483.0" promptText="            Start Hour" />
+        <Button layoutX="1249.0" layoutY="404.0" onAction="#setStartWorkingHoursAction" text="Set Start Hours" />
+
+        <TextField fx:id="endWorkingHoursField" layoutX="1218.0" layoutY="633.0" promptText="             End Hour" />
+        <Button layoutX="1247.0" layoutY="559.0" onAction="#setEndWorkingHoursAction" text="Set End Hours" />
+
+
+        <TextField fx:id="categoryIdField" layoutX="601.0" layoutY="484.0" prefHeight="42.0" prefWidth="173.0" promptText="Category ID" />
+        <TextField fx:id="newCategoryNameField" layoutX="806.0" layoutY="484.0" prefHeight="42.0" prefWidth="200.0" promptText="New Category Name" />
+
+        <Button layoutX="598.0" layoutY="555.0" onAction="#updateCategoryButtonAction" text="Update Category (Enter New Category Name &amp; Its ID)" />
+
+        <TextField fx:id = "deleteCategoryIdField" layoutX="601.0" layoutY="634.0" prefWidth="300.0" promptText="Category ID" />
+        <Button layoutX="602.0" layoutY="698.0" onAction="#deleteCategoryButtonAction" text="Delete Category (Enter Category ID Only)" />
+
+        <!-- Logout Button -->
+        <Button layoutX="1413.0" layoutY="30.0" onAction="#logout" text="Logout" />
+      <Button layoutX="972.0" layoutY="187.0" onAction="#updateRoomButtonAction" prefHeight="44.0" prefWidth="338.0" text="Update Room (Enter All information)" />
+    </children>
+</AnchorPane>
